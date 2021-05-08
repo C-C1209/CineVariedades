@@ -37,6 +37,7 @@
                     <li class="nav-item"><a class="nav-link" href="post.html">Apartar Snacks</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Proximamente</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Cartelera</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </div>
