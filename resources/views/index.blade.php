@@ -66,7 +66,7 @@
                 </div>
             </div>
             <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('{{asset('/clean/assets/img/peli2.jpg')}}')">
+            <div class="carousel-item" style="background-image: url('{{asset('/clean/assets/img/peli2.jpeg')}}')">
                 <div class="carousel-caption d-none d-md-block">
                     <h3 class="display-6">HOY EN CINE VARIEDADES</h3>
                     <!-- '
