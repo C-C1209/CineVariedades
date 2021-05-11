@@ -1,7 +1,7 @@
 <div class="text-center" id="letras" style="margin-bottom: 50px" stylesheet="{{asset('/clean/css/letrasopen.css')}}">
     <h1 class="text-uppercase" stylesheet="{{asset('/clean/css/letrasopen.css')}}" > Próximamente </h1>
 </div>
-<div class="container">
+        <div class="container">
                 <!-- Page Features-->
             
 
@@ -48,3 +48,6 @@
                 </div>
             </div>
         </div>
+<div class="text-center" id="letras" style="margin-bottom: 50px; height:50px;" stylesheet="{{asset('/clean/css/letrasopen.css')}}">
+    <h1 class="text-uppercase" stylesheet="{{asset('/clean/css/letrasopen.css')}}" >  </h1>
+</div>
