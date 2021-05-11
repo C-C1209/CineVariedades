@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #102236;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10153,6 +10153,8 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
   }
 }
 @media only screen and (min-width: 992px) {

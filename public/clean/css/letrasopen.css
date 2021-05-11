@@ -1,17 +1,15 @@
 
   
   div#letras {
-    position:absolute;
-    width: 300px;
-    height: 300px;
-    margin: -50px 0 0 -150px;
     text-align: center;
+    margin-left:5%;
+    margin-right:5%;
     border-radius: 8px;
     border: 3px solid rgb(0, 40, 70);
     cursor: pointer;
   }
   
-  div#letras:hover {
+  div#letras {
     animation: border-flicker 2s linear forwards;
   }
   
@@ -19,15 +17,16 @@
     font-family: "Open Sans";
     font-weight: 300;
     font-size:2.9em;
-    margin: 15px 0 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: rgba(120, 0, 50, .5);
   }
   
-  div#letras:hover h1 {
+  div#letras h1 {
     animation: text-flicker 2s linear forwards;
   }
   
-  div#letras:hover .first {
+  div#letras .first {
     animation: letter-flicker 3s linear infinite;
   }
   

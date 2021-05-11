@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
+background-color: #111b31;
 background-image: url('../../img/cine.jpg');
 background-size: cover;
 background-repeat: no-repeat;
