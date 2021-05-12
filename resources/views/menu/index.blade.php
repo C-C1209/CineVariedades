@@ -3,7 +3,7 @@
 
 @extends('menu.layouts.head')
 
-<body>
+<body style="background-color: #000;">
 
 
     <!-- Footer-->

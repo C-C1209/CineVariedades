@@ -19,7 +19,7 @@
     font-size:2.9em;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: rgba(120, 0, 50, .5);
+    color: rgba(0, 120, 30, 0.5);
   }
   
   div#letras h1 {
@@ -32,119 +32,119 @@
   
   @keyframes text-flicker {
     2% { 
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 31);
+      text-shadow: 0 0 15px rgb(0, 230, 161);
     }
     3% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     6% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);
     }
     9% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     11% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);
     }
     14% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     18% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     32% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);
     }
     33% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     37% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     39% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     43% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;;
     }
     46% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     47% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     100% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
   }
   
   @keyframes letter-flicker {
       2% { 
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+        color: rgb(0, 230, 19);
+        text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     3% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     6% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     9% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     11% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     14% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     18% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     32% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     33% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     37% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     39% {
-      color: rgba(120, 0, 50, .5);
+      color: rgba(0, 120, 30, 0.5);
       text-shadow: none;
     }
     40% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
     100% {
-      color: rgb(230, 0, 120);
-      text-shadow: 0 0 15px rgb(230, 0, 120);
+      color: rgb(0, 230, 19);
+      text-shadow: 0 0 15px rgb(0, 230, 50);;
     }
   }
   
