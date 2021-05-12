@@ -5,7 +5,7 @@
     margin-left:5%;
     margin-right:5%;
     border-radius: 8px;
-    border: 3px solid rgb(0, 40, 70);
+    border: 3px solid rgba(28, 97, 10, 0.692);
     cursor: pointer;
   }
   
@@ -19,7 +19,7 @@
     font-size:2.9em;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: rgba(0, 120, 30, 0.5);
+    color: rgba(255, 81, 0, 0.788);
   }
   
   div#letras h1 {
