@@ -40,7 +40,7 @@
                     <div class="card h-100">
                         <img class="card-img-top" style="background-image: url('{{asset('/clean/assets/img/peli6.jpg')}}')"  width="253" height="400" />
                         <div class="card-body">
-                            <h4 class="card-title">The shinning</h4>
+                            <h4 class="card-title">The Shining</h4>
                             <p class="card-text">Terror</p>
                         </div>
                         <div class="card-footer"><a class="btn btn-primary" href="#!">Mas Información...</a></div>
