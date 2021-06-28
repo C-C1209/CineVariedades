@@ -14,8 +14,8 @@ class Genero extends Migration
     public function up()
     {
         schema::create('generos',function(BluePrint $table){
-            $table->string('id');
-             // $table->foreign('id')->references('id')->on('peliculas');
+            $table->integer('id')->unsigned();
+            $table->foreign('id')->references('id')->on('peliculas');
             $table->string('Genero');
         });
     }
