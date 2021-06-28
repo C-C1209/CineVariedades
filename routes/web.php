@@ -18,7 +18,19 @@ Route::get('/', function () { return view('/menu/index'); });
 Route::get('/login', function () { return view('login'); });
 
 //Pagina controlAdmin
-Route::get('/controlAdmin', function () { return view('/controlAdmin/controlPanel'); });
+Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
+    
+    Route::get('/', [App\Http\Controllers\Admin\AdminController::class,'index']);
+    Route::get('/login', function () { return view('login'); });
+    
 
-//Ruta Peliculas del control Admin
-Route::get('/controlAdmin/peliculas', function () { return view('/controlAdmin/peliculas'); });
+});
+
+
+
+
+
+// Route::get('/controlAdmin', function () { return view('/controlAdmin/controlPanel'); });
+
+// //Ruta Peliculas del control Admin
+// Route::get('/controlAdmin/peliculas', function () { return view('/controlAdmin/peliculas'); });
