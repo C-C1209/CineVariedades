@@ -11,7 +11,7 @@
                     <li class="nav-item"><a class="nav-link" href="post.html">Dulceria</a></li>
                     <li class="nav-item"><a class="nav-link" href="#letras">Próximamente</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Cartelera</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </div>

@@ -58,7 +58,7 @@
 					¿No tienes una cuenta?<a href="#">Regístrate</a>
 				</div>
 				<div class="d-flex justify-content-center">
-					<a href="#">¿Olvidaste tu contraseña?</a>
+					<a href="../admin">¿Olvidaste tu contraseña?</a>
 				</div>
 			</div>
 		</div>

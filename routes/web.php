@@ -11,20 +11,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Pagina Principal
-Route::get('/', function () { return view('/menu/index'); });
-
-//Pagina Login
-Route::get('/login', function () { return view('login'); });
 
 //Pagina controlAdmin
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
-    
+   
     Route::get('/', [App\Http\Controllers\Admin\AdminController::class,'index']);
-    Route::get('/login', function () { return view('login'); });
     
 
 });
+
+    Route::get('/', [App\Http\Controllers\Cliente\ClienteController::class,'index']);
+    Route::get('/login', function () { return view('login'); });
+
 
 
 
