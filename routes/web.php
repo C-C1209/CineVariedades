@@ -32,3 +32,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
 // //Ruta Peliculas del control Admin
 // Route::get('/controlAdmin/peliculas', function () { return view('/controlAdmin/peliculas'); });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
