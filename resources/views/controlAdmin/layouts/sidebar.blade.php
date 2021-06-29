@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/controlAdmin/peliculas" class="nav-link">
+                    <a href="/admin/peliculas" class="nav-link">
                         <i class="nav-icon fas fa-address-book"></i>
                         <p>
                             Peliculas

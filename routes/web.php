@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
    
     Route::get('/', [App\Http\Controllers\Admin\AdminController::class,'index']);
+    Route::get('/peliculas', [App\Http\Controllers\Admin\PeliculasController::class,'index']);
+    Route::POST('/peliculas/edit', [App\Http\Controllers\Admin\PeliculasController::class,'edit']);
     
 
 });
@@ -32,3 +34,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
 // //Ruta Peliculas del control Admin
 // Route::get('/controlAdmin/peliculas', function () { return view('/controlAdmin/peliculas'); });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

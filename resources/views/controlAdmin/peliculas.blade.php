@@ -75,13 +75,71 @@
                     </div>
 
 
-
+<!--AQUI SE PONE EL CODIGO DE LA VISTA DE PELIS-->
                     <div class="card-body">
+                        <div class="content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    @if($message = Session::get('Listo'))
+                                        <div class="alert alert-success alert-dismissable fade show col-12" role="alert">
+                                            <h5>Listo</h5>
+                                            <p>{{$message}}</p>
+                                        </div>
+                                    @endif
 
-                        <!-- Aqui vamos a trabajar-->
-                        
+                                    <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th>Nombre</th>
+                                        <th>Idioma</th>
+                                        <th>Subtitulos</th>
+                                        <th>Director</th>
+                                        <th>Fecha</th>
+                                        <th>Descrpcion</th>
+                                        <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($productos as $p)
+                                        <tr>
+                                        
+                                            <td>
+                                                <img src="{{asset('img/cine.jpg')}}" alt="" width="70px">
+                                                {{$p->Nombre}}
+                                            </td>
+                                            <td>{{$p->Idioma}}</td>
+                                            <td>{{$p->Subtitulos}}</td>
+                                            <td>{{$p->Director}}</td>
+                                            <td>{{$p->Fecha}}</td>
+                                            <td>{{$p->Descripcion}}</td>
+                                            <td>
+                                                <button class="btn btn-danger btnEliminar" data-id="{{$p->id}}" 
+                                                data-toggle="modal" data-target="#modal-delete">
+                                                <i class="fa fa-trash"></i>
+                                                </button>
 
+                                                <button class="btn btn-primary btnEdit" 
+                                                data-id="{{$p->id}}" data-nombre="{{$p->Nombre}}" data-idioma="{{$p->Idioma}}" data-subtitulos="{{$p->Subtitulos}}" 
+                                                data-director="{{$p->Director}}" data-fecha="{{$p->Fecha}}" data-descripcion="{{$p->Descripcion}}"
+                                                data-toggle="modal" data-target="#modal-edit">
+                                                <i class="fa fa-edit"></i>
+                                                </button>
+                                                <form action="{{url('/admin/peliculas', ['id'=>$p->id])}}" method="POST" id="formEliminar_{{$p->id}}">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{$p->id}}">
+                                                <input type="hidden" name="_method" value="delete">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+<!--AQUI SE ACABA EL CODIGO DE LA VISTA DE PELIS-->
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
@@ -103,6 +161,99 @@
     </div>
     <!-- ./wrapper -->
 
+
+<!--AQUI ESTAN LOS MODALS-->
+<!-- Modal Edit -->
+<div class="modal fade" id="modal-edit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Editar Peliculas</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="/admin/peliculas/edit" method="POST" enctype="multipart/form-data">
+                @if($message = Session::get('errorInsert'))
+                <div class="alert alert-danger alert-dismissable fade show col-12" role="alert">
+                    <h5>Error:</h5>
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                @csrf
+                <div class="modal-body">
+                  <input type="text" id="idEdit" name="id">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control form-control-border" id="nombreEdit" name="nombre" value="{{@old('nombre')}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="idiomas">Idioma</label>
+                        <input type="text" class="form-control form-control-border" id="idiomaEdit" name="idiomas" value="{{@old('idiomas')}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitulos">Subtitulos</label>
+                        <input type="text" class="form-control form-control-border" id="subtitulosEdit" min="1" name="subtitulos" value="{{@old('subtitulos')}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="director">Director</label>
+                        <input type="text" class="form-control form-control-border" id="directorEdit" min="1" name="director" value="{{@old('director')}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" class="form-control form-control-border" id="fechaEdit" min="1" name="fecha" value="{{@old('fecha')}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control form-control-border" id="descripcionEdit" min="1" name="descripcion" value="{{@old('descripcion')}}">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+<!--MODAL ELIMINAR-->
+      <div class="modal fade" id="modal-delete">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Eliminar Pelicula</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                    <div class="modal-body">
+                    <label for="id">Id</label>
+                    <input type="text" class="form-control form-control-border" id="idEliminar" min="1" name="id" value="{{@old('id')}}">
+                        <h2 class="h6">¿Desea eliminar la pelicula?</h2>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger btnCloseEliminar">Eliminar</button>
+                    </div>
+                </form>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+          </div>
+          <!-- /.modal -->
+
+
+<!--AQUI ACABAN LOS MODALS-->
+
     <!-- jQuery -->
     <script src="{{asset('./dashboard/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap 4 -->
@@ -113,4 +264,42 @@
     <script src="{{asset('./dashboard/dist/js/demo.js')}}"></script>
 </body>
 
+<script>
+    var idEliminar=-1;
+        $(document).ready(function(){
+            @if($message = Session::get('errorInsert'))
+                $("#modal-add").modal('show');
+            @endif
+           
+            $(".btnEliminar").click(function(){
+              var id=$(this).data('id');
+              $("#idEliminar").val(id);
+              idEliminar=id;
+            });
+
+            $(".btnEdit").click(function(){
+              var id=$(this).data('id');
+              var nombre=$(this).data('nombre');
+              var idioma=$(this).data('idioma');
+              var subtitulos=$(this).data('subtitulos');
+              var director=$(this).data('director');
+              var fecha=$(this).data('fecha');
+              var descripcion=$(this).data('descripcion');
+
+              $("#idEdit").val(id);
+              $("#nombreEdit").val(nombre);
+              $("#idiomaEdit").val(idioma);
+              $("#subtitulosEdit").val(subtitulos);
+              $("#directorEdit").val(director);
+              $("#fechaEdit").val(fecha);
+              $("#descripcionEdit").val(descripcion);
+
+                console.log(id);
+            });
+
+            $(".btnCloseEliminar").click(function(){
+              $("#formEliminar_"+idEliminar).submit();
+            });
+        });
+    </script>
 </html>
